@@ -16,5 +16,5 @@ public class Zoo {
     public class Eagle extends Bird{
 
     }
-    public static Eagle johnathan = Zoo.new Eagle();
+    // public static Eagle johnathan = Zoo.new Eagle();
 }

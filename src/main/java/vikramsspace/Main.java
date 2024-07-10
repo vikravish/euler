@@ -8,6 +8,8 @@ public class Main {
         for (int i = 0; i < inputs.length; i++) {
             System.out.println(factorials[i]);
         }
+        System.out.println("----");
+        System.out.println(multiples3and5(1000));
     }
 
     // reverse string, and return it
@@ -55,9 +57,12 @@ public class Main {
         return nums;
     }
     //sums up all the multiples of 3 and 5 from 0-1000
-    public static  int multiples3and5(int number){
+    public static int multiples3and5(Integer max){
+        if(max == null){
+            max = 1000;
+        }
         int sum = 0;
-        for (int i = 0; i < 1000; i++){
+        for (int i = 0; i <= max; i++){
             if (i%3 == 0 || i%5 == 0){
                 sum += i;
             }
