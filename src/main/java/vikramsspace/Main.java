@@ -10,6 +10,7 @@ public class Main {
         }
         System.out.println("----");
         System.out.println(multiples3and5(1000));
+        System.out.println(primeFactor(1000));
     }
 
     // reverse string, and return it
@@ -70,6 +71,18 @@ public class Main {
         return sum;
     }
 
-    // public static 
+    //Finds the prime factors of a given number
+
+    public static int primeFactor(Integer maxNumber){
+        int max = 1;
+        for (int i = 1; i <= maxNumber; i++){
+            for (int j = 1; j <= maxNumber; j++){
+                if(j%i != 0){
+                    max = j;
+                }
+            }
+        }
+        return max;
+    }
 
 }
