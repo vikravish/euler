@@ -6,11 +6,14 @@ public class Main {
         int[] inputs = { 1, 2, 3, 4, 5 };
         int[] factorials = factorialArray(inputs);
         for (int i = 0; i < inputs.length; i++) {
-            System.out.println(factorials[i]);
+            //System.out.println(factorials[i]);
         }
-        System.out.println("----");
+        /*System.out.println("----");
         System.out.println(multiples3and5(1000));
-        System.out.println(primeFactor(1000));
+        System.out.println(primeFactor(1000));*/
+       //System.out.println(fibEvens(4000000));
+       System.out.println(isPalindrome(12321));
+       System.out.println(largestThreeDigitPalindrome());
     }
 
     // reverse string, and return it
@@ -85,4 +88,51 @@ public class Main {
         return max;
     }
 
+    //find the sum of the even-valued terms in the Fibonacci sequence whose values do not exceed four million
+    public static int fibEvens(Integer range){
+        int a = 0;
+        int b = 1;
+        int c = a + b;
+        int sum = 0;
+        while(a <= range){
+            c = a + b;
+            a = b;
+            b = c;
+            if(c%2 == 0){
+                sum+= c;
+            }
+        };
+        return sum;
+    }
+
+
+    //Find the largest palindrome made from the product of two 3-digit numbers.
+    public static int largestThreeDigitPalindrome(){
+        int max = 0;
+        for (int i = 999; i >= 100; i--) {
+            for (int j = 999; j >= 100; j--) {
+                int product = i * j;
+                if (isPalindrome(product) && product > max) {
+                    max = product;
+       
+                }
+            }
+        }
+        return max;
+    }
+    public static boolean isPalindrome(Integer someNumber){
+        String sTotal = Integer.toString(someNumber);
+        int start = 0;
+        int end = sTotal.length() - 1;
+        while (start < end){
+            if(sTotal.charAt(start) != sTotal.charAt(end)){
+                return false;
+            }
+        start++;
+        end--;
+        }
+        return true;
+    }
+
+    
 }
