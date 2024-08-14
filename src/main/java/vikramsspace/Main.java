@@ -1,6 +1,7 @@
 package vikramsspace;
 
 import java.math.BigInteger;
+import vikramsspace.BinaryClock;
 
 public class Main {
 
@@ -21,7 +22,8 @@ public class Main {
         // System.out.println(eulerFive(999999999));
         // System.out.println(factorialRecursive(5));
         // System.out.println(eulerEight(null));
-        eulerEleven(0);
+        // eulerEleven(0);
+        BinaryClock.getAllCombos(null, 0);
     }
 
     // reverse string, and return it
@@ -250,42 +252,42 @@ public class Main {
                 System.out.println();
             }
         }
-        
+
         int[][] intGrid = new int[20][20];
 
-        grid.map(row -> {
-            row.map(rawInput -> Integer.parseInt(rawInput))
-        });
-        for (int[] row : grid) {
-            for (String rawInput : row) {
-                
-            }
-        }
-        (0 until 20)
-            .map((i) -> {
-                (0 until 20).map(j -> {
-                    Integer.parseInt()
-                })
-            })
-        for (int i = 0; i < 20; i++) {
-            for (int j = 0; j < 20; j++) {
-                intGrid[i][j] = Integer.parseInt(grid[i][j]);
-            }
-        }
-        Integer maxNum = null;
-        for (int i = 0; i < 20; i++) {
-            for (int j = 0; j < 20; j++) {
-                int[] row = intGrid[i];
-                // TODO: Add vertical loop
-                int x = row[(j + 0) % 20] *
-                        row[(j + 1) % 20] *
-                        row[(j + 2) % 20] *
-                        row[(j + 3) % 20];
-                if (x > maxNum) {
-                    maxNum = x;
-                }
-            }
-        }
+        // grid.map(row -> {
+        // row.map(rawInput -> Integer.parseInt(rawInput))
+        // });
+        // for (int[] row : grid) {
+        // for (String rawInput : row) {
+
+        // }
+        // }
+        // // (0 until 20)
+        // // .map((i) -> {
+        // // (0 until 20).map(j -> {
+        // // Integer.parseInt()
+        // // })
+        // // })
+        // for (int i = 0; i < 20; i++) {
+        // for (int j = 0; j < 20; j++) {
+        // intGrid[i][j] = Integer.parseInt(grid[i][j]);
+        // }
+        // }
+        // Integer maxNum = null;
+        // for (int i = 0; i < 20; i++) {
+        // for (int j = 0; j < 20; j++) {
+        // int[] row = intGrid[i];
+        // // TODO: Add vertical loop
+        // int x = row[(j + 0) % 20] *
+        // row[(j + 1) % 20] *
+        // row[(j + 2) % 20] *
+        // row[(j + 3) % 20];
+        // if (x > maxNum) {
+        // maxNum = x;
+        // }
+        // }
+        // }
 
     }
 
